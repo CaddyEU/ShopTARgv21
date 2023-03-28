@@ -1,4 +1,6 @@
-﻿namespace Shop.Models.Car
+﻿using Shop.Models.Spaceship;
+
+namespace Shop.Models.Car
 {
     public class CarEditViewModel
     {
@@ -11,10 +13,12 @@
         public string Color { get; set; }
         public string Fuel { get; set; }
         public int Capacity { get; set; }
-        public int NumberOfDoors { get; set; }
-        public int NumberOfPassangers { get; set; }
+        public int NumberOfCarDoors { get; set; }
+        public int NumberOfPassangersWithDriver { get; set; }
         public int CarWeight { get; set; }
-        public DateTime DateOfProduction { get; set; }
+        public DateTime BuildOfDate { get; set; }
         public DateTime DateOfRegistration { get; set; }
+        public List<IFormFile> Files { get; set; }
+        public List<ImageViewModel> Image { get; set; } = new List<ImageViewModel>();
     }
 }

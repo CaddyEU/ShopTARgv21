@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ShopTARgv21.Core.Domain
 {
@@ -22,6 +17,7 @@ namespace ShopTARgv21.Core.Domain
         public int NumberOfCarDoors { get; set; }
         public int NumberOfPassangersWithDriver { get; set; }
         public int CarWeight { get; set; }
+        public IEnumerable<FileToDatabase> FileToDatabase { get; set; } = new List<FileToDatabase>();
         public DateTime BuildOfDate { get; set; }
         public DateTime DateOfRegistration { get; set; }
     }

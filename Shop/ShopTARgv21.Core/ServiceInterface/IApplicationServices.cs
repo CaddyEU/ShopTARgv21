@@ -2,9 +2,9 @@
 
 namespace ShopTARgv21.Core.ServiceInterface
 {
-    public interface  IApplicationServices
+    public interface IApplicationServices
     {
- 
-        
+
+
     }
 }
