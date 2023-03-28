@@ -4,7 +4,6 @@ using ShopTARgv21.Data;
 using ShopTARgv21.Core.Dto;
 using ShopTARgv21.Core.ServiceInterface;
 using Microsoft.EntityFrameworkCore;
-using Shop.Models.Spaceship;
 
 namespace Shop.Controllers
 {

@@ -1,6 +1,4 @@
-﻿using Shop.Models.Spaceship;
-
-namespace Shop.Models.Car
+﻿namespace Shop.Models.Car
 {
     public class CarViewModel
     {

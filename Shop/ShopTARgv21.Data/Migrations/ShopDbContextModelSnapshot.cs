@@ -23,213 +23,97 @@ namespace ShopTARgv21.Data.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
             modelBuilder.Entity("ShopTARgv21.Core.Domain.Car", b =>
-                {
-                    b.Property<Guid?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid?>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Brand")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Brand")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("BuildOfDate")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime>("BuildOfDate")
+                    .HasColumnType("datetime2");
 
-                    b.Property<int>("Capacity")
-                        .HasColumnType("int");
+                b.Property<int>("Capacity")
+                    .HasColumnType("int");
 
-                    b.Property<int>("CarWeight")
-                        .HasColumnType("int");
+                b.Property<int>("CarWeight")
+                    .HasColumnType("int");
 
-                    b.Property<string>("Color")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Color")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DateOfRegistration")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime>("DateOfRegistration")
+                    .HasColumnType("datetime2");
 
-                    b.Property<string>("Fuel")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Fuel")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Model")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Model")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("NumberOfCarDoors")
-                        .HasColumnType("int");
+                b.Property<int>("NumberOfCarDoors")
+                    .HasColumnType("int");
 
-                    b.Property<int>("NumberOfPassangersWithDriver")
-                        .HasColumnType("int");
+                b.Property<int>("NumberOfPassangersWithDriver")
+                    .HasColumnType("int");
 
-                    b.Property<string>("NumberOfRegistration")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("NumberOfRegistration")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("OwnerName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("OwnerName")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("VINCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("VINCode")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.ToTable("Car");
-                });
-
-            modelBuilder.Entity("ShopTARgv21.Core.Domain.FileToApi", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("FilePath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("RealEstateId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("FileToApi");
-                });
+                b.ToTable("Car");
+            });
 
             modelBuilder.Entity("ShopTARgv21.Core.Domain.FileToDatabase", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+            {
+                b.Property<Guid>("Id")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<byte[]>("ImageData")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
+                b.Property<Guid?>("CarId")
+                    .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ImageTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<byte[]>("ImageData")
+                    .IsRequired()
+                    .HasColumnType("varbinary(max)");
 
-                    b.Property<Guid?>("SpaceshipId")
-                        .HasColumnType("uniqueidentifier");
+                b.Property<string>("ImageTitle")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Id");
+                b.HasKey("Id");
 
-                    b.HasIndex("SpaceshipId");
+                b.HasIndex("CarId");
 
-                    b.ToTable("FileToDatabase");
-                });
-
-            modelBuilder.Entity("ShopTARgv21.Core.Domain.RealEstate", b =>
-                {
-                    b.Property<Guid?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BuildingType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("City")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Contact")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("County")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoomNumber")
-                        .HasColumnType("int");
-
-                    b.Property<double>("Size")
-                        .HasColumnType("float");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("RealEstate");
-                });
-
-            modelBuilder.Entity("ShopTARgv21.Core.Domain.Spaceship", b =>
-                {
-                    b.Property<Guid?>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("BuildOfDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Crew")
-                        .HasColumnType("int");
-
-                    b.Property<int>("EnginePower")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("LaunchDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("LiftUpToSpaceByTonn")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ModelType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("ModifiedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Passengers")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("PlaceOfBuild")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SpaceshipBuilder")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Spaceship");
-                });
+                b.ToTable("FileToDatabase");
+            });
 
             modelBuilder.Entity("ShopTARgv21.Core.Domain.FileToDatabase", b =>
-                {
-                    b.HasOne("ShopTARgv21.Core.Domain.Spaceship", null)
-                        .WithMany("FileToDatabases")
-                        .HasForeignKey("SpaceshipId");
-                });
+            {
+                b.HasOne("ShopTARgv21.Core.Domain.Car", null)
+                    .WithMany("FileToDatabase")
+                    .HasForeignKey("CarId");
+            });
 
-            modelBuilder.Entity("ShopTARgv21.Core.Domain.Spaceship", b =>
-                {
-                    b.Navigation("FileToDatabases");
-                });
+            modelBuilder.Entity("ShopTARgv21.Core.Domain.Car", b =>
+            {
+                b.Navigation("FileToDatabase");
+            });
 #pragma warning restore 612, 618
         }
     }
