@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopTARgv21.Data", "ShopTAR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopTARgv21.ApplicationServices", "ShopTARgv21.ApplicationServices\ShopTARgv21.ApplicationServices.csproj", "{DE1135A0-85E7-4B8F-AE66-06C33E98DE54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopTARgv21.SpaceshipTest", "ShopTARgv21.SpaceshipTest\ShopTARgv21.SpaceshipTest.csproj", "{9A2C4A46-6F45-4C9D-8705-92179581F477}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopTARgv21.SpaceshipTest", "ShopTARgv21.SpaceshipTest\ShopTARgv21.SpaceshipTest.csproj", "{9A2C4A46-6F45-4C9D-8705-92179581F477}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
